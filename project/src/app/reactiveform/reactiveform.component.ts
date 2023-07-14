@@ -19,7 +19,6 @@ export class ReactiveformComponent {
   {
   console.log(this.loginForm.value);
   this.username = this.loginForm.get('username')?.value
-   console.log(this.username);
   }
   
 }
