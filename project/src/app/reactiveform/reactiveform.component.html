@@ -1,0 +1,12 @@
+<div>
+   <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+    <input type="text" name="username" placeholder="enter name" formControlName="username">
+    <small *ngIf="loginForm.controls.username.invalid && loginForm.controls.username.touched">This field is required</small>
+    <input type="password" name="password" placeholder="enter password" formControlName="password">
+    <div *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched">
+        <small *ngIf="loginForm.controls.password.errors?.['required']">This field is required</small>
+        <small  *ngIf="loginForm.controls.password.errors?.['email']">Field is invalid</small>
+        </div>
+    <button>Submit</button>
+   </form>
+</div>

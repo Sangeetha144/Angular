@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "name": "Sangeetha Selvaraj",
+      "email": "sangeethaselvaraj144@gmail.com",
+      "mobile": "9751474259",
+      "gender": "",
+      "address": "1/70f2 selva Vinayagar nagar, near vao office sengamalapattithiruthangal",
+      "id": 1
+    },
+    {
+      "name": "Sangeetha Selvaraj",
+      "email": "sangeethaselvaraj144@gmail.com",
+      "mobile": "9751474259",
+      "gender": "female",
+      "address": "1/70f2 selva Vinayagar nagar, near vao office sengamalapattithiruthangal",
+      "id": 2
+    }
+  ]
+}

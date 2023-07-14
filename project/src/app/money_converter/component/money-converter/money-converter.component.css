@@ -1,0 +1,43 @@
+.parent
+{
+    display:flex;
+}
+input{
+    width:300px;
+    border-radius: 5px 5px;
+    padding: 10px;
+    margin-left: 20px;
+}
+select{
+    width:100px;
+    border-radius: 5px 5px;
+    padding: 10px;
+    background-color:rgb(80, 10, 147) ;
+    color:white;
+   
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.output
+{
+    font-size: 20px;
+    font-family: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+.con
+{
+    width:500px;
+    height:auto;
+    border-radius: 5px 5px;
+    box-shadow: rgba(0,0,0,0.5) 0px 0px 10px;
+    padding: 30px;
+    margin: 30px auto;
+}
+h1{
+    text-align: center;
+    margin: 50px;
+    color:rgb(80, 10, 147)
+}

@@ -1,0 +1,64 @@
+<div class="con">
+    <form #registerForm="ngForm" (ngSubmit)="submitForm(registerForm.value)">
+        <div class="header">
+            <h1>REGISTRATION FORM</h1>
+        </div>
+        <div>
+            <label>Name:</label>
+            <input type="text" placeholder="Enter Username" name="name" style="margin-left: 18px;" required
+                [(ngModel)]="user.name"><br>
+            <div *ngIf="registerForm.controls['name'].touched && registerForm.controls['name'].invalid">
+                <small *ngIf="registerForm.controls['name'].errors?.['required']">This Field is required</small>
+            </div>
+        </div> 
+        <div>
+            <div>
+                <label>E-Mail:</label>
+                <input type="email" placeholder="Enter E-Mail" name="email" required [(ngModel)]="user.email" email><br>
+                <div *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+                    <small *ngIf="registerForm.controls['email'].errors?.['required']">This Field is required</small>
+                    <small *ngIf="registerForm.controls['email'].errors?.['email']">Email is not valid</small>
+                </div>
+
+            </div>
+            <div>
+                <label>Mobile:</label>
+                <input type="text" placeholder="Enter Mobile Number" name="mobile" required [(ngModel)]="user.mobile"
+                    pattern="^[0-9]{10}$"><br>
+                <div *ngIf="registerForm.controls['mobile'].touched && registerForm.controls['mobile'].invalid">
+                    <small *ngIf="registerForm.controls['mobile'].errors?.['required']">This Field is required</small>
+                    <small *ngIf="registerForm.controls['mobile'].errors?.['pattern']">Mobile number should have 10
+                        digits</small>
+                </div>
+            </div>
+        </div>
+        <div class="parent">
+
+            <label>Gender:</label>
+            <div>
+                <input type="radio" name="gender" value="male" [(ngModel)]="user.gender" required>
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="female" [(ngModel)]="user.gender" required>
+                <label for="female">Female</label>
+            </div>
+            <div *ngIf="registerForm.submitted && registerForm.controls['gender'].invalid">
+                <small *ngIf="registerForm.controls['gender'].errors?.['required']">This Field is required</small>
+            </div>
+
+        </div><br>
+        <div>
+            <label>Address:</label><br>
+            <textarea rows="4" cols="58" required name="address" [(ngModel)]="user.address"></textarea><br>
+            <div *ngIf="registerForm.controls['address'].touched && registerForm.controls['address'].invalid">
+                <small *ngIf="registerForm.controls['address'].errors?.['required']">This Field is required</small>
+            </div>
+
+        </div>
+        <div>
+            <button >SUBMIT</button>
+        </div>
+    </form>
+
+</div>

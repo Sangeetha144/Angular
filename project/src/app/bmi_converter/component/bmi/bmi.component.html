@@ -1,0 +1,18 @@
+<div class="con">
+    <h1>BMI CALCULATOR</h1>
+    <div>
+    <label>Height:</label>
+    <input type="text" name="height" placeholder="Enter Your height in Meters" #height >
+    </div>
+    <div>
+    <label>Weight:</label>
+    <input type="text"  name="weight" placeholder="Enter Your weight in KiloGrams" #weight>
+    </div>
+    <button (click)="findBmi(height.value,weight.value)">FIND BMI</button>
+ <div class="output">
+  
+   <h3>HEIGHT <small>(meters)</small>:{{height.value}}</h3>
+   <h3>WEIGHT <small>(KiloGrams)</small>:{{weight.value}}</h3>
+   <h3> BMI: {{bmi}}</h3>
+ </div>
+</div>

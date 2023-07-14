@@ -1,0 +1,19 @@
+<div class="con">
+    <h1>CURRENCY CONVERTER</h1>
+    <div class="parent">
+        <div>
+            <label>INR</label>
+            <input type="text" name="inr" placeholder="Enter value in INR" [(ngModel)]="inr" (input)="convertCurrency()">
+        </div>
+        <div>
+            <select [(ngModel)]="currency" (change)="convertCurrency()">
+                <option value="USD"  name="usd">USD</option>
+                <option value="POUND" name="pound">POUND</option>
+                <option value="EURO" name="euro">EURO</option>
+            </select>
+        </div>
+    </div>
+    <div class="output">
+    <p>{{ inr }} ₹ is equivalent to {{ amount }} {{ currency }}</p>
+    </div>
+</div>

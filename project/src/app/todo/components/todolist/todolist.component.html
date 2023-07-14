@@ -1,0 +1,10 @@
+<h1>TO DO LIST APP</h1>
+<div>
+    
+       <input type="text" name="task_name" placeholder="Enter Your Task" [(ngModel)]="tasklist.task_name">
+       <input type="submit" value="ADD TASK" (click)="addTask()">
+    <div class="output">
+        {{task_added}}
+
+    </div>
+</div>
